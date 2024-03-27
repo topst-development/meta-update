@@ -1,0 +1,13 @@
+[Unit]
+Description=tc update engine
+
+[Service]
+Type=idle
+ExecStart=/usr/bin/TcUpdateEngine -c main
+RestartSec=1s
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+
+
